@@ -1,0 +1,22 @@
+14:02:17 **** Incremental Build of configuration Debug for project Problem 2 ****
+make all 
+Building file: ../MowningLawn.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MowningLawn.d" -MT"MowningLawn.d" -o "MowningLawn.o" "../MowningLawn.cpp"
+../MowningLawn.cpp: In function ‘int main()’:
+../MowningLawn.cpp:19:13: error: expected ‘;’ before ‘)’ token
+    for(int x)
+             ^
+../MowningLawn.cpp:19:13: error: expected primary-expression before ‘)’ token
+../MowningLawn.cpp:19:13: error: expected ‘;’ before ‘)’ token
+../MowningLawn.cpp:20:3: error: expected primary-expression before ‘}’ token
+   }
+   ^
+../MowningLawn.cpp:20:3: error: expected ‘;’ before ‘}’ token
+../MowningLawn.cpp:19:12: warning: unused variable ‘x’ [-Wunused-variable]
+    for(int x)
+            ^
+make: *** [MowningLawn.o] Error 1
+
+14:02:18 Build Finished (took 272ms)
+

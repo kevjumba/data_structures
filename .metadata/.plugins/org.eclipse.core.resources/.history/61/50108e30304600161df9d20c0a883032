@@ -1,0 +1,84 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <math.h>
+using namespace std;
+typedef unsigned long long ull;
+
+struct Data {
+  string pattern, text;
+};
+
+unsigned long long hashS(string S) {
+  unsigned long long num = 0;
+  for (int i = (S.length() - 1); i >= 0; i = i - 1) {
+    num = (num * 263 % 1000000007) + S[i] % 1000000007;
+  }
+  return num % 5;
+}
+
+void run() {
+  vector<vector<string> > hash;
+  int m, queries;
+  string type, str;
+  hash.resize(m);
+  cin >> m >> queries;
+  for (int i = 0; i < queries; i++) {
+    cin >> type;
+    if (type == "add") {
+      cin>>str;
+      unsigned long num = hashS(str);
+
+      cout<< "adding "<< str<< "at: "<<num;
+      for (int i = 0; i < hash.at(num).size(); i++) {
+        if (hash.at(num).at(i) == str) {
+          break;
+        }
+      }
+      hash.at(num).push_back(str);
+    }
+
+    else if (type == "del") {
+      cin>>str;
+      unsigned long num = hashS(str);
+
+      cout<< "deleting"<< str<< "at: "<<num;
+
+      for (int i = 0; i < hash.at(num).size(); i++) {
+        if (hash.at(num).at(i) == str) {
+          hash.at(num).erase(hash.at(num).begin() + i);
+        }
+      }
+
+    } else if (type == "find") {
+      cin>>str;
+      unsigned long num = hashS(str);
+      bool yes = false;
+      for (int i = 0; i < hash.at(num).size(); i++) {
+        if (hash.at(num).at(i) == str) {
+          hash.at(num).erase(hash.at(num).begin() + i);
+          cout<<"yes"<<endl;
+          yes = true;
+        }
+      }
+      if(!yes) cout<<"no"<<endl;
+    } else if(type == "check"){
+      int index;
+      cin>>index;
+      if(index<hash.size()){
+        for (int i = 0; i < hash.at(index).size(); i++) {
+          cout << hash.at(index).at(i) + " ";
+        }
+      }
+      cout<<endl;
+    }
+
+  }
+
+}
+
+int main() {
+  std::ios_base::sync_with_stdio(false);
+  run();
+  return 0;
+}

@@ -1,0 +1,33 @@
+#include <fstream>
+#include <vector>
+#include <iostream>
+
+
+using namespace std;
+
+int returnVal(char x){
+  return (int)x - 64;
+}
+int main(){
+  ifstream fin("input.txt");
+  ofstream fout("output.txt");
+  char c;
+  long num1 = 1, num2 = 1;
+  do {
+      cin>>c;
+      num1 *= returnVal(c);
+      cout<<num1<<endl;
+   } while (c != '\n');
+  do {
+        cin>>c;
+        num2 *= returnVal(c);
+        cout<<num2<<endl;
+  } while (c != '\n');
+  if((num1%47)==(num2%47)){
+    cout<<"GO"<<endl;
+  }
+  else{
+    cout<<"STAY"<<endl;
+  }
+//  cout<<((num1%47)==(num2%47))?"GO":"STAY";
+}

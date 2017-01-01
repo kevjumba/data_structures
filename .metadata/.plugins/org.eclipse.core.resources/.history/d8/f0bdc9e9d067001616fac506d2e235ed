@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+#include <stdio.h>
+
+using namespace std;
+
+int returnVal(char x){
+  return (int)x - 64;
+}
+int main(){
+  ifstream fin("ride.in");
+  ofstream fout("ride.out");
+  char c;
+  long num1, num2;
+  do {
+      c = getchar();
+      putchar (c);
+   } while (c != '.');
+  cout<<returnVal('B');
+}

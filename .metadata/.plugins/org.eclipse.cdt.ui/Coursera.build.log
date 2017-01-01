@@ -1,0 +1,13 @@
+17:14:28 **** Incremental Build of configuration Debug for project Coursera ****
+make all 
+Building target: Coursera
+Invoking: GCC C++ Linker
+g++  -o "Coursera"  ./check_brackets.o ./tree-height.o   
+./tree-height.o: In function `__gnu_cxx::new_allocator<int>::new_allocator()':
+/home/kevin/competition/Coursera/Debug/../tree-height.cpp:30: multiple definition of `main'
+./check_brackets.o:/home/kevin/competition/Coursera/Debug/../check_brackets.cpp:24: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Coursera] Error 1
+
+17:14:28 Build Finished (took 109ms)
+

@@ -1,0 +1,10 @@
+17:48:55 **** Build of configuration Debug for project Phone Book ****
+make all 
+Building file: ../phone_book.cpp
+Invoking: GCC C++ Compiler
+g++ -D_cplusplus=201103L -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0-std=c++0x -MMD -MP -MF"phone_book.d" -MT"phone_book.d" -o "phone_book.o" "../phone_book.cpp"
+g++: error: argument to ‘-fmessage-length=’ should be a non-negative integer
+make: *** [phone_book.o] Error 1
+
+17:48:56 Build Finished (took 267ms)
+

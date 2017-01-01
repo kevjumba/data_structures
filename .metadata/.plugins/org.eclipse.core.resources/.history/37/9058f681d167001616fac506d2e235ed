@@ -1,0 +1,26 @@
+#include <fstream>
+#include <vector>
+#include <iostream>
+
+
+using namespace std;
+
+int returnVal(char x){
+  return (int)x - 64;
+}
+int main(){
+  ifstream fin("input.txt");
+  ofstream fout("output.txt");
+  char c;
+  long num1 = 1, num2 = 1;
+  do {
+      fin>>c;
+      num1 *= returnVal(c);
+   } while (c != '\n');
+  do {
+        fin>>c;
+        num2 *= returnVal(c);
+  } while (c != '\n');
+
+  fout<<((num1%47)==(num2%47))?"GO":"STAY";
+}

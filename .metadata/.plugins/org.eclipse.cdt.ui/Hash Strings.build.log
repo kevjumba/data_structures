@@ -1,0 +1,44 @@
+17:32:17 **** Incremental Build of configuration Debug for project Hash Strings ****
+make all 
+Building file: ../hash_substring.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"hash_substring.d" -MT"hash_substring.d" -o "hash_substring.o" "../hash_substring.cpp"
+../hash_substring.cpp: In function ‘void display(int*)’:
+../hash_substring.cpp:10:48: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++) {
+                                                ^
+../hash_substring.cpp: In function ‘void precomputeHash(std::string, std::string, int, int)’:
+../hash_substring.cpp:39:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 1; i <= P.length(); i++) {
+                                 ^
+../hash_substring.cpp: In function ‘std::vector<int> rabinkarp(std::string, std::string, int)’:
+../hash_substring.cpp:53:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < T.length() - P.length(); i++) {
+                                             ^
+../hash_substring.cpp: In function ‘std::vector<std::basic_string<char> > run()’:
+../hash_substring.cpp:74:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < hash.at(num).size(); i++) {
+                                             ^
+../hash_substring.cpp:85:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < hash.at(num).size(); i++) {
+                                             ^
+../hash_substring.cpp:95:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < hash.at(num).size(); i++) {
+                                             ^
+../hash_substring.cpp:107:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       if (index < hash.size()) {
+                             ^
+../hash_substring.cpp: In function ‘int main()’:
+../hash_substring.cpp:126:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < result.size(); i++) {
+                                   ^
+Finished building: ../hash_substring.cpp
+ 
+Building target: Hash Strings
+Invoking: GCC C++ Linker
+g++  -o "Hash Strings"  ./hash_substring.o   
+Finished building target: Hash Strings
+ 
+
+17:32:17 Build Finished (took 568ms)
+

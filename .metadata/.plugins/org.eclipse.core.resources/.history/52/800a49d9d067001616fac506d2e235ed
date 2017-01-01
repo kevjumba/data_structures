@@ -1,0 +1,11 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int returnVal(char x){
+  return (int)x - 64;
+}
+int main(){
+  cout<<returnVal('B');
+}

@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+
+vector<int> partition3(int a[], int left, int right) {
+  int m1 = left - 1, m2 = right;
+  int p = left - 1, q = right;
+  int v = a[right];
+
+  while (true) {
+    while (a[++m1] < v)
+      ;
+
+    while (v < a[--m2])
+      if (m2 == left)
+        break;
+
+    if (m1 >= m2)
+      break;
+    swap(a[m1], a[m2]);
+
+    if (a[m1] == v) {
+      p++;
+      swap(a[p], a[m1]);
+    }
+
+    if (a[m2] == v) {
+      q--;
+      swap(a[m2], a[q]);
+    }
+  }
+
+  swap(a[m1], a[right]);
+
+  m2 -= 1;
+  for (int k = left; k < p; k++, m2--)
+    swap(a[k], a[m2]);
+
+  m1 += 1;
+  for (int k = right - 1; k > q; k--, m1++)
+    swap(a[m1], a[k]);
+
+  vector<int> result;
+  result.add(m1);
+  result.add(m2);
+}
+
+void quicksort(int a[], int left, int right) {
+  if (right <= left)
+    return;
+
+  int m1, m2;
+
+  partition3(a, left, right, m1, m2);
+
+  quicksort(a, left, m2);
+  quicksort(a, m1, right);
+}
+
+void display(int a[], int n) {
+  for (int i = 0; i < n; ++i)
+    cout << a[i];
+  cout << endl;
+}
+
+int main() {
+  int N;
+  cin >> N;
+  int array[N];
+  for (int i = 0; i < N; i++) {
+    cin >> array[i];
+  }
+  quicksort(array, 0, N - 1);
+  display(array, N);
+  return 0;
+}

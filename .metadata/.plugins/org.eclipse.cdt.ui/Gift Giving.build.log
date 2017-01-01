@@ -1,0 +1,17 @@
+17:58:46 **** Incremental Build of configuration Debug for project Gift Giving ****
+make all 
+Building file: ../gift.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"gift.d" -MT"gift.o" -o "gift.o" "../gift.cpp"
+../gift.cpp: In function ‘int main()’:
+../gift.cpp:12:17: error: missing template arguments before ‘people’
+   unordered_map people;
+                 ^
+../gift.cpp:12:17: error: expected ‘;’ before ‘people’
+../gift.cpp:16:3: error: ‘people’ was not declared in this scope
+   people.resize(numPeople);
+   ^
+make: *** [gift.o] Error 1
+
+17:58:47 Build Finished (took 584ms)
+

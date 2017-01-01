@@ -1,0 +1,8 @@
+#include <iostream>
+#include <vector>
+int returnVal(char x){
+  return (int)x - 87;
+}
+int main(){
+
+}

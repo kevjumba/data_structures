@@ -1,0 +1,47 @@
+#include <iostream>
+#include <fstream>
+#include <algorithm>
+#include <cstring>
+#include <vector>
+using namespace std;
+
+
+ifstream fin("input.txt");
+ofstream fout("output.txt");
+
+int touched[100];
+int position[100];
+int N;
+
+
+int dist(int pos1, int pos2){
+	if(pos1>N||pos1<0||pos2>N||pos2<0) return -1;
+	return abs(position[pos1]-position[pos2]);
+}
+
+int blast(int pos, int time){
+	int destroyed[100]={0};
+	for(int i=0;i<N;i++){
+		if(dist(t))
+	}
+
+}
+
+int main(void) {
+	fin>>N;
+	int maxStreak=0;
+	cout<<maxStreak;
+	for(int i=0;i<N;i++){
+		fin>>positions[i];
+	}
+	for(int i=0;i<N;i++){
+		int streak=blast(1, i, 1);
+		maxStreak=max(streak, maxStreak);
+
+	}
+	fout<<maxStreak;
+}
+
+
+
+

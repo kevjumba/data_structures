@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Test/hash_substring.cpp&apos; to &apos;test.cpp&apos;" description="Rename resource &apos;hash_substring.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="hash_substring.cpp" name="test.cpp" stamp="1467860921974" updateReferences="true"/>
+</session>
